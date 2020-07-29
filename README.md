@@ -17,7 +17,7 @@ appRoles Sample Code
 }
 ```
 
-
+```
 {
   "allowedMemberTypes": [
     "User"
