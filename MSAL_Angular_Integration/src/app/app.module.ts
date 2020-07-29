@@ -33,9 +33,9 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     AppRoutingModule,
     MsalModule.forRoot({
       auth: {
-        clientId: 'Enter_the_Application_Id_Here',
-        authority: 'Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here',
-        redirectUri: 'Enter_the_Redirect_Uri_Here',
+        clientId: 'c2cd1ffa-2ab8-4259-9d12-d4caa9503dde',//'Enter_the_Application_Id_Here',
+        authority: 'https://login.microsoftonline.com/developerguru.onmicrosoft.com', //'Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here',
+        redirectUri: 'http://localhost:4200',//'Enter_the_Redirect_Uri_Here',
       },
       cache: {
         cacheLocation: 'localStorage',
@@ -51,7 +51,9 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
       ],
       unprotectedResources: [],
       protectedResourceMap: [
-        ['Enter_the_Graph_Endpoint_Herev1.0/me', ['user.read']]
+        // ['Enter_the_Graph_Endpoint_Herev1.0/me', ['user.read']]
+        ['https://graph.microsoft.com/v1.0/me', ['user.read']],
+        ['https://developerguruapi.azurewebsites.net', ['https://developerguruapi.azurewebsites.net/user_impersonation']]
       ],
       extraQueryParameters: {}
     })

@@ -16,6 +16,12 @@ export class ProfileComponent implements OnInit {
   constructor(private authService: MsalService, private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get ('https://developerguruapi.azurewebsites.net/api/test?name=asish')    
+    .subscribe({
+      next: (profile) => {
+        debugger;
+        this.profile = profile;
+      }});
     this.getProfile();
   }
 
