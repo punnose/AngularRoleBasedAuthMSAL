@@ -1,2 +1,2 @@
-# Angular RoleBase Authorization with MSAL
+# Angular RoleBased Authorization with MSAL
 Implementing Authorization on Angular Application with Azure AD using MSAL (Microsoft Authentication Library)
